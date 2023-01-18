@@ -1,0 +1,657 @@
+main {
+  z-index: -1;
+  width: 100%;
+}
+
+.main_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 5% minmax(33%, auto) minmax(15%, 35%);
+  column-gap: 0.25rem;
+  min-width: auto;
+  width: 100%;
+  max-width: 1350px;
+  min-height: fit-content;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  max-width: min-content;
+  min-width: 15rem;
+  margin: auto;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: rgba(140, 168, 183, 0.31);
+  font-family: "Open Sans", helvetica, sans-serif;
+}
+
+.card img {
+  align-self: center;
+  margin: 0 auto 0;
+  width: 2fr;
+  padding: 0.5rem;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+.text_box p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex-direction: row;
+    height: min-content;
+    max-width: fit-content;
+    min-width: 15rem;
+  }
+  .text_box {
+    width: 100%;
+    height: min-content;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem 1rem;
+  }
+}
+.main {
+  opacity: 0;
+  transform: scale(0, 0);
+  grid-column: 2/2;
+  grid-row: 2/2;
+  transition: border-radius 500ms, opacity 500ms, transform 500ms cubic-bezier(1, 1, 1, -0.51), padding 500ms;
+}
+
+input.index_check {
+  top: -9990px;
+  left: -9990px;
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  height: 0;
+  width: 0;
+}
+
+label.index_label {
+  grid-column: 2/2;
+  grid-row: 3/3;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  line-height: 2rem;
+  height: 2rem;
+  width: 2rem;
+  font-family: "Open Sans", helvetica, sans-serif;
+  background-color: rgba(248, 207, 64, 0.2);
+  color: rgba(0, 255, 0, 0.999);
+  border-radius: 5rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.text_box {
+  color: lime;
+  opacity: 0;
+  transform: scale(1, 0);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  margin: 0 auto 0;
+  padding: 1rem 1rem;
+  align-self: flex-end;
+  background-color: rgba(28, 30, 30, 0.999);
+  text-align: start;
+  font-size: x-large;
+  font-weight: 900;
+  transition: all 500ms cubic-bezier(0, 1, 0, 0.7);
+}
+
+.text_box span,
+.index_label span {
+  animation: animate 1200ms steps(1, end) infinite;
+}
+
+input.index_check:checked ~ .index_label span {
+  animation: animate 0ms step-end paused;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+input.index_check:checked ~ .main,
+input.index_check:checked ~ .card.main div.text_box {
+  border-radius: 1rem;
+  opacity: 1;
+  transform: scale(1, 1);
+  padding: 1rem 1rem;
+  transition: all 350ms cubic-bezier(1, 1, 1, -0.51);
+}
+
+article.card.progress {
+  opacity: 1;
+  transform: scale(1, 1);
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+.text_box.about {
+  color: lime;
+  opacity: 1;
+  transform: scale(1, 1);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  margin: 0 auto 0;
+  padding: 1rem 1rem;
+  align-self: flex-end;
+  background-color: rgba(28, 30, 30, 0.999);
+  text-align: start;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+article.card.hello {
+  opacity: 1;
+  transform: scale(1, 1);
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+.text_box.hello {
+  color: lime;
+  opacity: 1;
+  transform: scale(1, 1);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  margin: 0 auto 0;
+  padding: 1rem 1rem;
+  align-self: flex-end;
+  background-color: rgba(28, 30, 30, 0.999);
+  text-align: center;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  width: 90%;
+  min-width: none;
+  max-width: 57rem;
+  height: 4rem;
+  margin: 0 auto;
+  background-color: transparent;
+  justify-content: flex-start;
+  border-bottom: 0.15rem solid rgb(248, 207, 64);
+  z-index: 11;
+}
+
+.menu_check {
+  position: relative;
+  top: -9990px;
+  left: -9990px;
+  opacity: 0;
+  cursor: none;
+  height: 0;
+  width: 0;
+}
+
+.menu_check:checked ~ nav {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all 350ms ease-in-out;
+}
+
+label.menu_label {
+  align-self: center;
+  position: absolute;
+  left: 1.3rem;
+  top: 2.2857142857rem;
+  background-color: rgb(248, 207, 64);
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 0.15rem;
+  margin: 0.2rem;
+  z-index: 10;
+  transition: all 500ms ease-in-out;
+}
+
+label.menu_label::after {
+  content: "";
+  color: transparent;
+  background-color: rgb(248, 207, 64);
+  bottom: 0.5rem;
+  transition: all 100ms ease;
+}
+
+label.menu_label::before {
+  content: "";
+  top: 0.5rem;
+  background-color: rgb(248, 207, 64);
+  transition: all 100ms ease;
+}
+
+label.menu_label::after,
+label.menu_label::before {
+  position: absolute;
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 0.15rem;
+  transition: all 20ms ease;
+}
+
+.menu_check:checked ~ label.menu_label {
+  transform: scale(1.6, 2) translatey(150%);
+  transform-origin: left;
+  transition: transform 350ms ease;
+}
+
+.menu_check:checked ~ label.menu_label::after,
+.menu_check:checked ~ label.menu_label::before {
+  transform: scale(1, 0);
+  transform-origin: top;
+  background-color: transparent;
+  transition-duration: 50ms;
+}
+
+.menu_wrap {
+  background-color: transparent;
+  width: 110%;
+  height: 600%;
+  transform: translate(0, -0.75rem);
+  z-index: -1;
+}
+
+.tool_tip.label {
+  align-self: center;
+  position: relative;
+  left: 4.05rem;
+  bottom: 0.5rem;
+  height: max-content;
+  width: max-content;
+  background-color: rgba(28, 30, 30, 0.9);
+  border-radius: 0.55rem;
+  transform: scale(0, 0);
+  transform-origin: top left;
+  transition: transform 300ms ease-out 3500ms;
+  border-inline: 0.2rem solid rgba(140, 168, 183, 0.8);
+  border-block: 0.2rem solid rgba(140, 168, 183, 0.8);
+}
+
+.tool_tip.label > p {
+  color: lime;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  text-align: left;
+  border-radius: 0.25rem;
+  line-height: 1.25rem;
+  padding: 0.2rem 0.3rem;
+  margin: 0.2rem 0.3rem;
+}
+
+.tool_tip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid transparent;
+  border-right: 1.93rem solid rgba(140, 168, 183, 0.85);
+  border-bottom: 0.5rem solid transparent;
+  transition: border-color 1000ms steps(2, end) 2500ms;
+  position: absolute;
+  top: 0.4rem;
+  left: -1.89rem;
+}
+
+input.menu_check:checked + label.menu_label div.tool_tip.label {
+  transform: scale(0, 0);
+  transition: transform 50ms ease-out 10ms;
+}
+
+.menu_wrap:hover > .tool_tip.label,
+label.menu_label:hover .tool_tip.label,
+.menu_wrap:hover .tool_tip::after,
+label.menu_label:hover .too_tip::after {
+  transform: scale(1, 1);
+  transition: transform 150ms ease-out 1000ms;
+}
+
+nav.Main_Nav {
+  position: absolute;
+  top: 4rem;
+  background-color: inherit;
+  flex: 1 1 8rem;
+  opacity: 0;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+}
+
+ul#buttons {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border-radius: 0.2rem;
+  background-color: inherit;
+  padding: 0.5rem 0.5rem 0.5rem 0.05rem;
+  background-color: rgba(23, 45, 72, 0.999);
+}
+
+ul#buttons > li {
+  margin: 0.1rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+ul#buttons button,
+ul#buttons a {
+  font-family: "Fredoka", Helvetica, "open sans", Arial;
+  font-weight: bolder;
+  font-size: 1.35rem;
+  width: 5rem;
+  height: 3rem;
+  padding: 0.5rem auto;
+  background-color: rgba(23, 45, 72, 0.95);
+  color: rgb(248, 207, 64);
+  border-radius: 0.2rem;
+  border-style: none;
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
+}
+
+ul#buttons button[value=page] {
+  background-color: rgba(140, 168, 183, 0.2);
+  font-size: 1.6rem;
+}
+ul#buttons button[value=page] a {
+  background-color: transparent;
+  font-size: 1.6rem;
+}
+
+ul#buttons button:hover {
+  background-color: rgba(140, 168, 183, 0.4);
+  color: rgb(248, 207, 64);
+}
+
+ul#buttons button:hover a,
+ul#buttons button:hover a:hover {
+  background-color: transparent;
+  color: rgb(248, 207, 64);
+}
+
+ul#buttons button:active {
+  color: rgb(23, 45, 72);
+  text-decoration: none;
+  background-color: rgba(140, 168, 183, 0.7);
+}
+
+ul#buttons button:active a:active,
+ul#buttons button:active a {
+  border-style: none;
+  color: rgb(23, 45, 72);
+}
+
+.MainTitle {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: -0.1rem;
+  color: rgb(248, 207, 64);
+  font-family: "Fredoka", Helvetica, "open sans", Arial;
+  font-size: 3rem;
+  font-weight: 900;
+  background: transparent;
+  align-self: flex-end;
+  width: auto;
+  padding: 0rem auto;
+}
+
+.MainTitle > p:nth-child(1) {
+  color: transparent;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+}
+
+.MainTitle > p:nth-child(2) {
+  color: rgb(248, 207, 64);
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.MainTitle > p > span {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 900px) {
+  label[for=menu_check],
+  label[for=menu_check]::before,
+  label[for=menu_check]::after,
+  .menu_wrap,
+  .menu_wrap::after {
+    display: none;
+  }
+  nav.Main_Nav {
+    top: unset;
+    transition: unset;
+    position: unset;
+    flex: 1 1 auto;
+    opacity: 1;
+    transform: scale(1, 1);
+    align-self: flex-end;
+  }
+  ul#buttons {
+    flex-direction: row;
+    padding: 0.2rem;
+  }
+  ul#buttons button {
+    background-color: rgb(23, 45, 72);
+  }
+  ul#buttons > li {
+    margin: 0 0.08rem 0.01rem;
+  }
+  .MainTitle > p:nth-child(1) {
+    color: rgb(248, 207, 64);
+    visibility: visible;
+    position: relative;
+    top: 0;
+    right: 1rem;
+  }
+  .MainTitle > p:nth-child(2) {
+    color: transparent;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+  }
+}
+.catApp {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+  min-width: 400px;
+  max-width: 1200px;
+  overflow: hidden;
+  background-color: rgba(28, 30, 30, 0.999);
+  background-blend-mode: overlay, darken;
+}
+
+.Meme {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  justify-content: space-around;
+  background-color: rgba(28, 30, 30, 0.999);
+  min-height: 40rem;
+  max-height: 45rem;
+  min-width: 22rem;
+  padding: 0rem;
+  margin: 0.001rem auto 0.001rem;
+  top: 1rem;
+  right: 0.01rem;
+  bottom: 1rem;
+  left: 0.01rem;
+  border: 0.2rem solid rgba(255, 215, 0, 0.5);
+  border-radius: 0.4rem;
+  overflow: visible;
+  opacity: 1;
+  z-index: 0;
+}
+
+.glow::before {
+  content: "";
+  align-self: center;
+  background-image: linear-gradient(to top, rgba(0, 255, 0, 0.05), transparent 25%), linear-gradient(to left, transparent, rgba(0, 255, 0, 0.05), transparent);
+  box-shadow: 0rem 0rem 6rem 0.05rem rgba(0, 255, 0, 0.05) inset, 0rem 0rem 10rem 0.15rem rgba(0, 255, 0, 0.2);
+  position: absolute;
+  display: flexblock;
+  top: 0rem;
+  bottom: 10%;
+  left: -0.01rem;
+  right: -0.01rem;
+  z-index: 1rem;
+}
+
+.button_1:active + .glow::before {
+  content: "";
+  align-self: center;
+  background-image: linear-gradient(to top, rgba(0, 255, 0, 0.3), transparent 30%), linear-gradient(to left, transparent, rgba(0, 255, 0, 0.1), transparent);
+  box-shadow: 0rem 0rem 6rem 0.05rem rgba(0, 255, 0, 0.2) inset, 0rem 0rem 10rem 4.5rem rgba(0, 255, 0, 0.35);
+  position: absolute;
+  display: flexblock;
+  border-radius: 1%;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  top: 0rem;
+  bottom: 10%;
+  left: -0.01rem;
+  right: -0.01rem;
+  z-index: 1;
+}
+
+.Cat_Pic {
+  display: block;
+  justify-content: flex-start;
+  width: 95%;
+  border: 0.21rem solid rgba(219, 231, 244, 0.75);
+  background-color: black;
+  margin: 1rem auto 1rem;
+  min-width: 18rem;
+  max-width: 200px;
+  max-height: 12rem;
+  aspect-ratio: 1.5;
+  z-index: 5;
+}
+
+.Meme_Text {
+  display: block;
+  position: relative;
+  text-align: center;
+  background-color: black;
+  font-family: "lucida sans", "Arial Narrow Bold", sans-serif, san;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: rgb(219, 231, 244);
+  border: 0.15rem solid rgba(219, 231, 244, 0.7);
+  text-shadow: 0 0 0.5rem rgba(255, 228, 173, 0.2);
+  padding: 1rem;
+  width: 33vw;
+  z-index: 5;
+}
+
+.button_1 {
+  display: block;
+  position: relative;
+  margin: 0.1rem auto;
+  padding: 0.1rem auto;
+  background-color: rgba(140, 168, 183, 0.3);
+  background-image: radial-gradient(ellipse 35rem 6rem at 40% 20%, transparent 5%, rgba(0, 255, 0, 0.0065) 15%, rgba(219, 231, 244, 0.5) 40%, transparent 60%, rgba(219, 231, 244, 0.7)), radial-gradient(ellipse 12rem 95% at 57% 45%, rgba(0, 255, 0, 0.75), transparent);
+  color: rgba(23, 45, 72, 0.45);
+  text-shadow: 0px 0px 0.15rem rgba(0, 255, 0, 0.6);
+  font-size: 2.25rem;
+  width: 15rem;
+  height: 5rem;
+  bottom: 5%;
+  font-family: "Fredoka", "Times New Roman", serif;
+  border-radius: 5%;
+  box-shadow: 0rem 0rem 1.5rem rgba(0, 255, 0, 0.12), 0rem 0rem 1.5rem rgba(0, 255, 0, 0.12), 0.12rem 0.09rem 0.3rem #302505 inset, -0.1rem -0.1rem 0.5rem lime inset;
+  border: 0;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.glow::after {
+  content: "";
+  display: block;
+  height: 10rem;
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0rem;
+  right: 0rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5%;
+  transform: perspective(46rem) rotatex(65deg) translate3d(0rem, 0rem, -1.5rem);
+  background-image: radial-gradient(farthest-side at 50%, rgba(0, 255, 0, 0.1), transparent 45%);
+}
+
+.button_1:hover {
+  text-shadow: 0px 0px 0.15rem rgba(0, 255, 0, 0.7);
+  box-shadow: 0rem 0rem 1.2rem rgba(255, 201, 185, 0.12), 0rem 0rem 1.2rem rgba(0, 255, 0, 0.32), 0.09rem 0.09rem 0.25rem #302505 inset, -0.1rem -0.1rem 0.5rem lime inset;
+}
+
+.button_1:hover ~ .glow::after {
+  background-image: radial-gradient(farthest-side at 50%, rgba(0, 255, 0, 0.15), transparent 47%);
+  background-color: transparent;
+}
+
+.button_1:active {
+  background-image: radial-gradient(ellipse 35rem 6rem at 40% 80%, transparent 5%, rgba(0, 255, 0, 0.0075) 10%, rgba(219, 231, 244, 0.4) 30%, transparent 45%), radial-gradient(ellipse 12rem 95% at 57% 45%, rgba(0, 255, 0, 0.9), transparent);
+  color: rgba(0, 255, 0, 0.15);
+  border: 0.1rem solid rgba(0, 255, 0, 0.55);
+  background-color: rgba(0, 255, 0, 0.1);
+  text-shadow: 0px 0px 0.1rem rgba(219, 231, 244, 0.45);
+  padding: 0.9rem;
+  box-shadow: 0rem 0rem 1.5rem rgba(0, 255, 0, 0.42), 0rem 0rem 5rem rgba(0, 255, 0, 0.9), 0.08rem 0.08rem 0.2rem rgba(219, 231, 244, 0.3) inset, 0rem 0.08rem 0.2rem 0.21rem rgba(219, 231, 244, 0.1) inset;
+}
+
+.button_1:active ~ .glow::after {
+  background-image: radial-gradient(35% 30% at 50%, rgba(0, 255, 0, 0.5), transparent 85%);
+  background-color: rgba(0, 255, 0, 0.009);
+  height: 10rem;
+  transform: perspective(15rem) rotatex(65deg) translate3d(0rem, 0rem, -1.5rem);
+}
+
+@media screen and (max-width: 900px) {
+  .Meme_Text {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .button_1 {
+    font-size: 1.7rem;
+    width: 10rem;
+  }
+  .catApp {
+    background-size: inherit 400px;
+  }
+  .Cat_Pic {
+    min-width: 6rem;
+    aspect-ratio: 1.5;
+  }
+}
