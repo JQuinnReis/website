@@ -6,7 +6,7 @@ main {
 .main_wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 5% minmax(33%, auto) minmax(15%, 35%);
+  grid-template-rows: minmax(5%, 23%) minmax(33%, auto) minmax(5%, 33%);
   column-gap: 0.25rem;
   min-width: auto;
   width: 100%;
@@ -14,7 +14,7 @@ main {
   min-height: fit-content;
   height: 100vh;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0.5rem 3.25rem;
 }
 
 .card {

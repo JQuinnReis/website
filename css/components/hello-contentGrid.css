@@ -6,7 +6,7 @@ article.card.hello {
 }
 
 .text_box.hello {
-  color: lime;
+  color: rgb(255, 255, 0);
   opacity: 1;
   transform: scale(1, 1);
   width: fit-content;

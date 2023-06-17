@@ -1,4 +1,4 @@
-
+//__________________________________________________________________________________
 var i = 1
 
 //    If javascript is enabled this replaces the <a></a>'s in the buttons
@@ -19,8 +19,7 @@ for (let i = 0; i <= listItems.length - 1; i++) { //for-loop through range (0, l
                         // replaces the <a> of button (i) with JS friendly code. // this is other pages
                         }; 
 }
-
-
+//__________________________________________________________________________________
 //   allows the buttons to function without an <a></a>  
 
 function goto(link){
@@ -28,8 +27,44 @@ function goto(link){
 };
 
 
-DarkReader.disable()
-DarkReader.removeDynamicTheme()
+//_______________________________________________________________________________--
+//  enter key unchecks fake cmd checkbox
+const button = document.getElementById('index_check');
+
+console.log(button);
+document.addEventListener('keydown', function(event){
+                if ( event.key == "Enter" ){
+                console.log("working");
+                button.checked = false;
+};});
+ 
+//__________________________________________________________________________________
+
+
+
+// const button = document.getElementById('index_check')
+//         button.addEventListener( 'change', function() {
+//         if(this.checked) {
+//                 const text = document.getElementById("index_label");
+//                 text.innerHTML= "Press Enter";
+//         } else {
+//                 const text = document.getElementById("index_label");
+//                 text.innerHTML= "[ReisJ@Home:~]$<span>▮</span>";
+//     }
+// });
+//         // if (button.checked = true){
+        //         console.log("box is checked");
+        //         changelable1()
+        // };
+
+// function changelable1(){
+//         console.log('change function runs');
+//         const text = document.getElementById("index_label");
+//         text.innerHTML= "Press Enter";
+// };
+
+// DarkReader.disable()
+// DarkReader.removeDynamicTheme()
 
 
 

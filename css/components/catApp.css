@@ -36,8 +36,8 @@
 .glow::before {
   content: "";
   align-self: center;
-  background-image: linear-gradient(to top, rgba(0, 255, 0, 0.05), transparent 25%), linear-gradient(to left, transparent, rgba(0, 255, 0, 0.05), transparent);
-  box-shadow: 0rem 0rem 6rem 0.05rem rgba(0, 255, 0, 0.05) inset, 0rem 0rem 10rem 0.15rem rgba(0, 255, 0, 0.2);
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.05), transparent 25%), linear-gradient(to left, transparent, rgba(255, 255, 0, 0.05), transparent);
+  box-shadow: 0rem 0rem 6rem 0.05rem rgba(255, 255, 0, 0.05) inset, 0rem 0rem 10rem 0.15rem rgba(255, 255, 0, 0.2);
   position: absolute;
   display: flexblock;
   top: 0rem;
@@ -50,8 +50,8 @@
 .button_1:active + .glow::before {
   content: "";
   align-self: center;
-  background-image: linear-gradient(to top, rgba(0, 255, 0, 0.3), transparent 30%), linear-gradient(to left, transparent, rgba(0, 255, 0, 0.1), transparent);
-  box-shadow: 0rem 0rem 6rem 0.05rem rgba(0, 255, 0, 0.2) inset, 0rem 0rem 10rem 4.5rem rgba(0, 255, 0, 0.35);
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), transparent 30%), linear-gradient(to left, transparent, rgba(255, 255, 0, 0.1), transparent);
+  box-shadow: 0rem 0rem 6rem 0.05rem rgba(255, 255, 0, 0.2) inset, 0rem 0rem 10rem 4.5rem rgba(255, 255, 0, 0.35);
   position: absolute;
   display: flexblock;
   border-radius: 1%;
@@ -100,16 +100,16 @@
   margin: 0.1rem auto;
   padding: 0.1rem auto;
   background-color: rgba(140, 168, 183, 0.3);
-  background-image: radial-gradient(ellipse 35rem 6rem at 40% 20%, transparent 5%, rgba(0, 255, 0, 0.0065) 15%, rgba(219, 231, 244, 0.5) 40%, transparent 60%, rgba(219, 231, 244, 0.7)), radial-gradient(ellipse 12rem 95% at 57% 45%, rgba(0, 255, 0, 0.75), transparent);
+  background-image: radial-gradient(ellipse 35rem 6rem at 40% 20%, transparent 5%, rgba(255, 255, 0, 0.0065) 15%, rgba(219, 231, 244, 0.5) 40%, transparent 60%, rgba(219, 231, 244, 0.7)), radial-gradient(ellipse 12rem 95% at 57% 45%, rgba(255, 255, 0, 0.75), transparent);
   color: rgba(23, 45, 72, 0.45);
-  text-shadow: 0px 0px 0.15rem rgba(0, 255, 0, 0.6);
+  text-shadow: 0px 0px 0.15rem rgba(255, 255, 0, 0.6);
   font-size: 2.25rem;
   width: 15rem;
   height: 5rem;
   bottom: 5%;
   font-family: "Fredoka", "Times New Roman", serif;
   border-radius: 5%;
-  box-shadow: 0rem 0rem 1.5rem rgba(0, 255, 0, 0.12), 0rem 0rem 1.5rem rgba(0, 255, 0, 0.12), 0.12rem 0.09rem 0.3rem #302505 inset, -0.1rem -0.1rem 0.5rem lime inset;
+  box-shadow: 0rem 0rem 1.5rem rgba(255, 255, 0, 0.12), 0rem 0rem 1.5rem rgba(255, 255, 0, 0.12), 0.12rem 0.09rem 0.3rem #302505 inset, -0.1rem -0.1rem 0.5rem rgb(255, 255, 0) inset;
   border: 0;
   cursor: pointer;
   z-index: 15;
@@ -126,32 +126,32 @@
   padding: 0.5rem 0.5rem;
   border-radius: 5%;
   transform: perspective(46rem) rotatex(65deg) translate3d(0rem, 0rem, -1.5rem);
-  background-image: radial-gradient(farthest-side at 50%, rgba(0, 255, 0, 0.1), transparent 45%);
+  background-image: radial-gradient(farthest-side at 50%, rgba(255, 255, 0, 0.1), transparent 45%);
 }
 
 .button_1:hover {
-  text-shadow: 0px 0px 0.15rem rgba(0, 255, 0, 0.7);
-  box-shadow: 0rem 0rem 1.2rem rgba(255, 201, 185, 0.12), 0rem 0rem 1.2rem rgba(0, 255, 0, 0.32), 0.09rem 0.09rem 0.25rem #302505 inset, -0.1rem -0.1rem 0.5rem lime inset;
+  text-shadow: 0px 0px 0.15rem rgba(255, 255, 0, 0.7);
+  box-shadow: 0rem 0rem 1.2rem rgba(255, 201, 185, 0.12), 0rem 0rem 1.2rem rgba(255, 255, 0, 0.32), 0.09rem 0.09rem 0.25rem #302505 inset, -0.1rem -0.1rem 0.5rem rgb(255, 255, 0) inset;
 }
 
 .button_1:hover ~ .glow::after {
-  background-image: radial-gradient(farthest-side at 50%, rgba(0, 255, 0, 0.15), transparent 47%);
+  background-image: radial-gradient(farthest-side at 50%, rgba(255, 255, 0, 0.15), transparent 47%);
   background-color: transparent;
 }
 
 .button_1:active {
-  background-image: radial-gradient(ellipse 35rem 6rem at 40% 80%, transparent 5%, rgba(0, 255, 0, 0.0075) 10%, rgba(219, 231, 244, 0.4) 30%, transparent 45%), radial-gradient(ellipse 12rem 95% at 57% 45%, rgba(0, 255, 0, 0.9), transparent);
-  color: rgba(0, 255, 0, 0.15);
-  border: 0.1rem solid rgba(0, 255, 0, 0.55);
-  background-color: rgba(0, 255, 0, 0.1);
+  background-image: radial-gradient(ellipse 35rem 6rem at 40% 80%, transparent 5%, rgba(255, 255, 0, 0.0075) 10%, rgba(219, 231, 244, 0.4) 30%, transparent 45%), radial-gradient(ellipse 12rem 95% at 57% 45%, rgba(255, 255, 0, 0.9), transparent);
+  color: rgba(255, 255, 0, 0.15);
+  border: 0.1rem solid rgba(255, 255, 0, 0.55);
+  background-color: rgba(255, 255, 0, 0.1);
   text-shadow: 0px 0px 0.1rem rgba(219, 231, 244, 0.45);
   padding: 0.9rem;
-  box-shadow: 0rem 0rem 1.5rem rgba(0, 255, 0, 0.42), 0rem 0rem 5rem rgba(0, 255, 0, 0.9), 0.08rem 0.08rem 0.2rem rgba(219, 231, 244, 0.3) inset, 0rem 0.08rem 0.2rem 0.21rem rgba(219, 231, 244, 0.1) inset;
+  box-shadow: 0rem 0rem 1.5rem rgba(255, 255, 0, 0.42), 0rem 0rem 5rem rgba(255, 255, 0, 0.9), 0.08rem 0.08rem 0.2rem rgba(219, 231, 244, 0.3) inset, 0rem 0.08rem 0.2rem 0.21rem rgba(219, 231, 244, 0.1) inset;
 }
 
 .button_1:active ~ .glow::after {
-  background-image: radial-gradient(35% 30% at 50%, rgba(0, 255, 0, 0.5), transparent 85%);
-  background-color: rgba(0, 255, 0, 0.009);
+  background-image: radial-gradient(35% 30% at 50%, rgba(255, 255, 0, 0.5), transparent 85%);
+  background-color: rgba(255, 255, 0, 0.009);
   height: 10rem;
   transform: perspective(15rem) rotatex(65deg) translate3d(0rem, 0rem, -1.5rem);
 }
