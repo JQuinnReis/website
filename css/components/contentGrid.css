@@ -15,6 +15,7 @@ main {
   height: 100vh;
   margin: 0 auto;
   padding: 0.5rem 3.25rem;
+  grid-auto-flow: column;
 }
 
 .card {

@@ -29,11 +29,11 @@ input.index_check {
   line-height: 1rem;
   background-color: transparent;
   z-index: 2;
-  padding: 3rem;
-  border-radius: 10rem;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
   position: fixed;
-  top: 5%;
-  right: 15%;
+  bottom: 17%;
+  right: 17%;
   transition: background-image 1000ms ease-in-out;
 }
 
@@ -49,16 +49,15 @@ label.index_label {
   transition: all 500ms ease-out;
 }
 
-.card.button:hover label.index_label {
+label.index_label {
   color: rgba(255, 255, 0, 0.75);
   background-color: rgba(23, 45, 72, 0.25);
-  transition: all 800ms ease-in 650ms;
+  transition: all 400ms ease-in 100ms;
 }
 
 .card.button:hover {
-  background-color: rgba(23, 45, 72, 0.15);
-  transition: all 400ms ease-in 150ms;
-  box-shadow: -1rem 0.5rem 0.74rem rgba(23, 45, 72, 0.15), 1rem -0.5rem 0.74rem rgba(23, 45, 72, 0.15);
+  transition: all 200ms ease-in 50ms;
+  box-shadow: 0.5rem 0.5rem 0.15rem rgba(23, 45, 72, 0.415);
 }
 
 .text_box {
